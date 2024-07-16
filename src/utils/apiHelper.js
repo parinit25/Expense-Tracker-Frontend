@@ -7,7 +7,7 @@ class ApiHelper {
   constructor() {
     if (!ApiHelper.instance) {
       this.client = axios.create({
-        baseURL: "http://16.171.44.146",
+        baseURL: "https://expense-tracker-api.twilightparadox.com/",
         headers: {
           "Content-Type": "application/json",
         },
