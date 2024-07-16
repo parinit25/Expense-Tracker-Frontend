@@ -7,7 +7,7 @@ class ApiHelper {
   constructor() {
     if (!ApiHelper.instance) {
       this.client = axios.create({
-        baseURL: "http://localhost:5000",
+        baseURL: "http://16.171.44.146",
         headers: {
           "Content-Type": "application/json",
         },
