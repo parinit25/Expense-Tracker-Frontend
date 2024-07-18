@@ -104,6 +104,7 @@
 } */
 .container {
   background-color: #eaf5f4;
+  height: 100vh;
 }
 
 .expenses-leaderboard-container {
@@ -202,12 +203,15 @@
     transform: translateX(0);
   }
 }
-
-.delete-icon-container ion-icon {
-  color: red;
+.delete-icon-container {
+  display: flex;
   font-size: 2.5rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+}
+
+.delete-icon ion-icon {
+  color: red;
 }
 
 .delete-icon-container ion-icon:hover {

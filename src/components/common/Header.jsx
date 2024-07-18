@@ -42,7 +42,9 @@ const Header = () => {
         </div>
 
         <div
-          className={`${styles["nav-backdrop"]} ${isNavOpen ? styles.open : ""}`}
+          className={`${styles["nav-backdrop"]} ${
+            isNavOpen ? styles.open : ""
+          }`}
           onClick={toggleNav}
         ></div>
         <nav
@@ -51,9 +53,7 @@ const Header = () => {
           <ul className={styles["main-nav-list"]}>
             <li>
               {userData?.premiumUser === false ? (
-                <button className={styles["premium-button"]}>
-                  Buy Premium
-                </button>
+                <></>
               ) : (
                 <div className={styles["premium-container"]}>
                   <ion-icon name="star"></ion-icon>
@@ -62,20 +62,23 @@ const Header = () => {
               )}
             </li>
             <li>
-              <a className={styles["main-nav-link"]} href="#">
-                Section 2
+              <a className={styles["main-nav-link"]} href="/">
+                Home
               </a>
             </li>
             <li>
-              <a className={styles["main-nav-link"]} href="#">
-                Section 3
+              <a className={styles["main-nav-link"]} href="/expenses">
+                Expenses
               </a>
             </li>
-            <li>
-              <a className={styles["main-nav-link"]} href="#">
-                Section 4
-              </a>
-            </li>
+            {userData?.premiumUser && (
+              <li>
+                <a className={styles["main-nav-link"]} href="/download-history">
+                  Download History
+                </a>
+              </li>
+            )}
+
             <li>
               {!userData ? (
                 <Link
